@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Summit Complex | SGOC — Colour Option 2</title>
+<meta name="description" content="Summit Complex — daycare, nursery and primary school, secondary grammar, commercial and industrial technical education under Summit Group of Companies.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='18' y='58' width='16' height='26' rx='2' fill='%23c89b3c'/%3E%3Crect x='42' y='38' width='16' height='46' rx='2' fill='%23e4bd64'/%3E%3Crect x='66' y='52' width='16' height='32' rx='2' fill='%23c89b3c'/%3E%3Cpath d='M50 38V19l31-10' fill='none' stroke='%23e4bd64' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='81' cy='9' r='4' fill='%23e4bd64'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{
+  --navy:#12372f;
+  --navy2:#1b4a3f;
+  --blue:#267565;
+  --gold:#e36b45;
+  --gold2:#e5bd69;
+  --cream:#f5efe3;
+  --paper:#fffdf8;
+  --white:#fff;
+  --ink:#17362f;
+  --muted:#687a74;
+  --line:#d9e3de;
+  --soft:#eaf4ef;
+  --max:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
+h1,h2,h3,h4{font-family:Manrope,sans-serif;line-height:1.04;letter-spacing:-.04em}
+.mono{font-family:'Space Mono',monospace}
+.ey{font:700 .68rem 'Space Mono',monospace;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:10px}
+.ey:before{content:'';width:28px;height:1px;background:var(--gold)}
+[data-fr]{display:none}
+html.lang-fr [data-en]{display:none!important}
+html.lang-fr [data-fr]{display:inline}
+html.lang-fr h1[data-fr],html.lang-fr h2[data-fr],html.lang-fr h3[data-fr],html.lang-fr h4[data-fr],html.lang-fr p[data-fr],html.lang-fr div[data-fr]{display:block}
+
+header{position:fixed;inset:0 0 auto;z-index:100;background:rgba(18,55,47,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.09)}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-logo{width:44px;height:44px;object-fit:contain;border-radius:8px;background:#fff;padding:4px;display:block}
+.mark{width:38px;height:38px;border:1px solid rgba(243,179,138,.72);display:grid;place-items:center;color:var(--gold2);font-weight:800;letter-spacing:-.06em}
+.brand strong{display:block;color:#fff;font:800 1.25rem Manrope}
+.brand small{display:block;color:rgba(255,255,255,.48);font:400 .48rem 'Space Mono',monospace;letter-spacing:.1em;text-transform:uppercase;margin-top:3px}
+.nav-links{display:flex;gap:27px;align-items:center}
+.nav-links a{color:rgba(255,255,255,.8);font:700 .7rem 'Space Mono',monospace;text-transform:uppercase;letter-spacing:.06em}
+.nav-links a:hover,.nav-links a.current{color:var(--gold2)}
+.nav-actions{display:flex;align-items:center;gap:15px}
+.lang{display:flex;border:1px solid rgba(255,255,255,.15);border-radius:999px;overflow:hidden}
+.lang button{border:0;background:transparent;color:rgba(255,255,255,.55);padding:7px 11px;font:700 .67rem 'Space Mono',monospace;cursor:pointer}
+.lang button.active{background:var(--gold);color:var(--navy)}
+.hamb{display:none;background:none;border:0;color:white;font-size:1.4rem}
+
+.hero{min-height:92vh;position:relative;color:#fff;display:grid;align-items:end;overflow:hidden;background:var(--navy)}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#27715f 0%,#12372f 100%)}
+.hero-bg:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 78% 22%,rgba(243,179,138,.25),transparent 33%),linear-gradient(120deg,rgba(7,18,29,.12),rgba(7,18,29,.74))}
+.placeholder{height:100%;min-height:100%;display:grid;place-items:center;position:relative;overflow:hidden}
+.placeholder .ph-inner{text-align:center;padding:28px;color:rgba(255,255,255,.66)}
+.placeholder i{font-size:2.6rem;color:var(--gold2);margin-bottom:15px}
+.placeholder strong{display:block;font:700 .76rem 'Space Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.placeholder span{display:block;margin-top:7px;font-size:.82rem;color:rgba(255,255,255,.46)}
+.hero-inner{position:relative;z-index:2;padding:150px 0 76px;display:grid;grid-template-columns:1.18fr .72fr;gap:70px;align-items:end}
+.hero h1{font-size:clamp(3.2rem,7vw,7.2rem);max-width:900px;margin:18px 0 24px}
+.hero-copy{font-size:1.03rem;line-height:1.78;color:rgba(255,255,255,.72);max-width:650px}
+.hero-aside{border-left:1px solid rgba(255,255,255,.22);padding-left:26px}
+.hero-aside .kicker{font:700 .66rem 'Space Mono',monospace;text-transform:uppercase;letter-spacing:.12em;color:var(--gold2)}
+.hero-aside p{color:rgba(255,255,255,.58);font-size:.92rem;line-height:1.75;margin-top:10px}
+.hero-aside .mini-list{margin-top:22px;display:grid;gap:11px}
+.hero-aside .mini-item{display:flex;gap:11px;align-items:flex-start;color:rgba(255,255,255,.76);font-size:.84rem}
+.hero-aside .mini-item i{color:var(--gold2);margin-top:4px}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 19px;font:700 .69rem 'Space Mono',monospace;letter-spacing:.08em;text-transform:uppercase}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:var(--gold2)}
+.btn-light{border:1px solid rgba(255,255,255,.3);color:#fff}
+.btn-light:hover{border-color:var(--gold);color:var(--gold2)}
+
+.intro-strip{background:#fff;border-bottom:1px solid var(--line)}
+.intro-grid{display:grid;grid-template-columns:1.25fr repeat(3,.7fr);align-items:stretch}
+.intro-lead{padding:27px 30px 27px 0}
+.intro-lead p{font-size:.96rem;line-height:1.7;color:var(--muted);max-width:520px}
+.intro-stat{padding:27px 24px;border-left:1px solid var(--line)}
+.intro-stat b{display:block;font:800 1.9rem Manrope;color:var(--navy)}
+.intro-stat span{display:block;font-size:.76rem;color:var(--muted);margin-top:6px;line-height:1.4}
+
+.section{padding:108px 0}
+.section.cream{background:var(--cream)}
+.section.soft{background:var(--soft)}
+.section.dark{background:var(--navy2);color:#fff}
+.head{display:flex;justify-content:space-between;gap:50px;align-items:end;margin-bottom:48px}
+.head h2{font-size:clamp(2.7rem,5vw,5.2rem);max-width:780px}
+.head p{max-width:460px;color:var(--muted);line-height:1.8}
+.dark .head p{color:rgba(255,255,255,.58)}
+
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-copy h3{font-size:2.45rem;margin:17px 0 20px}
+.about-copy p{font-size:1rem;line-height:1.85;color:var(--muted);margin-bottom:16px}
+.about-photo{height:500px;border-radius:4px;overflow:hidden;background:linear-gradient(135deg,#2b7c69,#17493e)}
+
+.stages{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.stage{position:relative;background:#fff;border:1px solid var(--line);padding:30px;min-height:235px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.stage:hover{transform:translateY(-4px);box-shadow:0 18px 45px rgba(18,55,47,.10)}
+.stage .num{font:700 .68rem 'Space Mono',monospace;color:var(--gold);letter-spacing:.08em}
+.stage h3{font-size:1.6rem;margin:32px 0 11px}
+.stage p{font-size:.92rem;line-height:1.72;color:var(--muted);max-width:470px}
+.stage .tag{position:absolute;right:22px;top:21px;font:700 .6rem 'Space Mono',monospace;text-transform:uppercase;letter-spacing:.1em;color:#8090a0}
+.stage:after{content:'';position:absolute;right:-30px;bottom:-38px;width:120px;height:120px;border:1px solid rgba(227,107,69,.20);border-radius:50%}
+
+.facility-grid{display:grid;grid-template-columns:1.12fr .88fr .88fr;grid-template-rows:280px 280px;gap:14px}
+.facility{position:relative;overflow:hidden;background:#246b59}
+.facility:first-child{grid-row:span 2}
+.facility .ph{position:absolute;inset:0}
+.facility:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 38%,rgba(10,35,29,.78))}
+.facility-copy{position:absolute;z-index:2;left:20px;right:20px;bottom:18px;color:#fff}
+.facility-copy small{font:700 .6rem 'Space Mono',monospace;color:var(--gold2);letter-spacing:.12em;text-transform:uppercase}
+.facility-copy strong{display:block;font:700 1.18rem Manrope;margin-top:4px}
+
+.values{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.12)}
+.value{padding:30px;background:rgba(255,255,255,.025);min-height:210px}
+.value b{display:block;font:700 .67rem 'Space Mono',monospace;color:var(--gold2);margin-bottom:33px}
+.value h3{font-size:1.3rem;margin-bottom:10px}
+.value p{font-size:.83rem;line-height:1.68;color:rgba(255,255,255,.52)}
+
+.gallery-note{margin-top:18px;font-size:.76rem;color:var(--muted);font-family:'Space Mono',monospace;letter-spacing:.04em}
+
+.cta{position:relative;overflow:hidden;background:linear-gradient(130deg,#1b594b,#12372f)}
+.cta:before{content:'';position:absolute;width:520px;height:520px;border:1px solid rgba(243,179,138,.18);border-radius:50%;right:-180px;top:-240px}
+.cta-inner{position:relative;z-index:2;display:flex;justify-content:space-between;gap:40px;align-items:end}
+.cta h2{font-size:clamp(2.8rem,5vw,5.4rem);max-width:840px;color:#fff}
+.cta p{margin-top:15px;color:rgba(255,255,255,.57);max-width:650px;line-height:1.75}
+
+footer{background:#0d2b24;color:rgba(255,255,255,.56);padding:72px 0 24px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:45px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,.08)}
+footer h4{font:700 .68rem 'Space Mono',monospace;color:var(--gold);text-transform:uppercase;letter-spacing:.12em;margin-bottom:18px}
+footer li{margin-bottom:10px;font-size:.88rem}
+footer a:hover{color:var(--gold2)}
+.foot-brand p{max-width:330px;line-height:1.7;font-size:.88rem;margin-top:16px}
+.bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:20px;font-size:.74rem}
+
+.reveal{opacity:0;transform:translateY(22px);transition:.75s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* Mobile navigation */
+@media(max-width:1000px){
+  .nav-links{display:none}
+  .hamb{display:block}
+  header .nav{position:relative}
+  header .nav-links{display:none;position:fixed;top:82px;left:16px;right:16px;z-index:200;flex-direction:column;align-items:stretch;gap:0;background:rgba(18,55,47,.98);border:1px solid rgba(255,255,255,.12);box-shadow:0 24px 60px rgba(0,0,0,.35);padding:10px;border-radius:16px;max-height:calc(100vh - 100px);overflow:auto}
+  body.menu-open header .nav-links{display:flex}
+  header .nav-links a{padding:15px 14px;border-bottom:1px solid rgba(255,255,255,.07)}
+  header .nav-links a:last-child{border-bottom:0}
+  .hamb{position:relative;z-index:220;cursor:pointer}
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  .intro-grid{grid-template-columns:1fr 1fr}
+  .intro-lead{grid-column:1/-1;padding-right:0}
+  .intro-stat:nth-child(2){border-left:0}
+  .about-grid{grid-template-columns:1fr}
+  .about-photo{height:420px}
+  .facility-grid{grid-template-columns:1fr 1fr;grid-template-rows:270px 220px 220px}
+  .facility:first-child{grid-row:span 2}
+  .values{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .wrap{width:min(var(--max),calc(100% - 32px))}
+  .nav{height:72px}
+  .hero{min-height:94vh}
+  .hero-inner{padding:124px 0 56px}
+  .hero h1{font-size:clamp(3rem,15vw,5rem)}
+  .section{padding:78px 0}
+  .head{display:block;margin-bottom:34px}
+  .head h2{margin-bottom:15px}
+  .intro-grid{grid-template-columns:1fr 1fr}
+  .intro-lead{grid-column:1/-1}
+  .intro-stat{padding:21px 15px}
+  .intro-stat b{font-size:1.55rem}
+  .stages{grid-template-columns:1fr}
+  .about-photo{height:360px}
+  .facility-grid{grid-template-columns:1fr;grid-template-rows:270px 190px 190px 190px 190px}
+  .facility:first-child{grid-row:auto}
+  .values{grid-template-columns:1fr}
+  .cta-inner{display:block}
+  .cta .btn{margin-top:28px}
+  .footer-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Alternative colour direction — warm coral + forest green */
+.stage:nth-child(odd) .stage-icon{background:rgba(227,107,69,.10);color:var(--gold)}
+.stage:nth-child(even) .stage-icon{background:rgba(38,117,101,.10);color:var(--blue)}
+.facility:hover .facility-body{background:linear-gradient(180deg,transparent 0%,rgba(10,35,29,.86) 100%)}
+.strip{background:var(--navy2)}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><img class="brand-logo" src="logo.jpg" alt="SGOC logo"><span><strong>SGOC</strong><small>Summit Group of Companies</small></span></a>
+    <nav class="nav-links">
+      <a href="index.html" data-en>Home</a><a href="index.html" data-fr>Accueil</a>
+      <a href="about.html" data-en>About</a><a href="about.html" data-fr>À Propos</a>
+      <a href="construction.html" data-en>Construction</a><a href="construction.html" data-fr>Construction</a>
+      <a href="solar.html" data-en>Solar</a><a href="solar.html" data-fr>Solaire</a>
+      <a class="current" href="education.html" data-en>Education</a><a class="current" href="education.html" data-fr>Éducation</a>
+      <a href="equipment.html" data-en>Equipment</a><a href="equipment.html" data-fr>Équipements</a>
+      <a href="contact.html" data-en>Contact</a><a href="contact.html" data-fr>Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang"><button data-lang-btn="en" class="active">EN</button><button data-lang-btn="fr">FR</button></div>
+      <button class="hamb" id="hamb" aria-label="Menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg">
+    <div class="placeholder">
+      <div class="ph-inner"><i class="fa-solid fa-school"></i><strong>Hero image placeholder</strong><span>Replace with Summit Complex campus photograph</span></div>
+    </div>
+  </div>
+  <div class="wrap hero-inner">
+    <div>
+      <span class="ey">Education · Summit Complex</span>
+      <h1 data-en>ONE CAMPUS.<br>EVERY STAGE<br>OF GROWTH.</h1>
+      <h1 data-fr>UN CAMPUS.<br>CHAQUE ÉTAPE<br>DE LA FORMATION.</h1>
+      <p class="hero-copy" data-en>Summit Complex brings together early childhood, basic, secondary, commercial and industrial technical education in one continuous educational journey.</p>
+      <p class="hero-copy" data-fr>Le Summit Complex réunit la petite enfance, le primaire, le secondaire, l’enseignement commercial et la formation industrielle et technique dans un même parcours éducatif.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px">
+        <a class="btn btn-gold" href="#schools"><span data-en>Explore Summit Complex</span><span data-fr>Découvrir Summit Complex</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a class="btn btn-light" href="contact.html"><span data-en>Contact SGOC</span><span data-fr>Contacter SGOC</span></a>
+      </div>
+    </div>
+    <aside class="hero-aside">
+      <div class="kicker">Summit Complex</div>
+      <p data-en>An education ecosystem designed to serve learners from their earliest years through secondary, commercial and technical studies.</p>
+      <p data-fr>Un écosystème éducatif conçu pour accompagner les apprenants de la petite enfance jusqu'aux études secondaires, commerciales et techniques.</p>
+      <div class="mini-list">
+        <div class="mini-item"><i class="fa-solid fa-check"></i><span data-en>Daycare & early childhood</span><span data-fr>Garderie et petite enfance</span></div>
+        <div class="mini-item"><i class="fa-solid fa-check"></i><span data-en>Nursery & primary education</span><span data-fr>Enseignement maternel et primaire</span></div>
+        <div class="mini-item"><i class="fa-solid fa-check"></i><span data-en>Secondary grammar education</span><span data-fr>Enseignement secondaire général</span></div>
+        <div class="mini-item"><i class="fa-solid fa-check"></i><span data-en>Commercial & industrial technical college</span><span data-fr>Collège commercial et industriel technique</span></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="intro-strip">
+  <div class="wrap intro-grid">
+    <div class="intro-lead"><p data-en>At Summit Complex, education is treated as a journey — with each stage preparing learners for the next.</p><p data-fr>Au Summit Complex, l'éducation est pensée comme un parcours, chaque étape préparant l'apprenant à la suivante.</p></div>
+    <div class="intro-stat"><b>06</b><span data-en>education pathways within the complex</span><span data-fr>parcours éducatifs au sein du complexe</span></div>
+    <div class="intro-stat"><b>01</b><span data-en>connected educational environment</span><span data-fr>environnement éducatif intégré</span></div>
+    <div class="intro-stat"><b>∞</b><span data-en>room to learn, grow and build a future</span><span data-fr>un espace pour apprendre, grandir et préparer l'avenir</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap about-grid">
+    <div class="about-copy reveal">
+      <span class="ey">The Summit Complex vision</span>
+      <h3 data-en>Education that grows with the learner.</h3>
+      <h3 data-fr>Une éducation qui grandit avec l'apprenant.</h3>
+      <p data-en>Summit Complex is more than a collection of school buildings. It brings different levels and directions of education into one institutional identity, giving families a clear educational pathway from the earliest years through academic, commercial and technical studies.</p>
+      <p data-fr>Le Summit Complex est plus qu'un ensemble de bâtiments scolaires. Il réunit plusieurs niveaux et orientations de formation au sein d'une même identité institutionnelle, offrant aux familles un parcours éducatif allant de la petite enfance aux études générales, commerciales et techniques.</p>
+      <p data-en>The result is a school environment built around continuity, development and preparation for the next stage.</p>
+      <p data-fr>Le résultat est un environnement scolaire pensé autour de la continuité, du développement et de la préparation à l'étape suivante.</p>
+    </div>
+    <div class="about-photo reveal">
+      <div class="placeholder"><div class="ph-inner"><i class="fa-solid fa-image"></i><strong>Campus image placeholder</strong><span>Replace with local Summit Complex photograph</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section cream" id="schools">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="ey">The schools within Summit Complex</span><h2 data-en>One institution. Six distinct learning stages.</h2><h2 data-fr>Une institution. Six étapes d'apprentissage.</h2></div>
+      <p data-en>From first experiences in the classroom to practical and career-oriented studies, Summit Complex brings a broad educational offering together under one name.</p>
+      <p data-fr>Des premières expériences scolaires aux études pratiques et orientées vers la carrière, le Summit Complex réunit une offre éducative diversifiée sous un même nom.</p>
+    </div>
+    <div class="stages">
+      <article class="stage reveal"><div class="num">01 · EARLY YEARS</div><span class="tag">FOUNDATION</span><h3 data-en>Daycare</h3><h3 data-fr>Garderie</h3><p data-en>An early learning environment focused on care, routine, discovery and the first foundations of social and educational development.</p><p data-fr>Un environnement de petite enfance axé sur l'accueil, la routine, la découverte et les premières bases du développement social et éducatif.</p></article>
+      <article class="stage reveal"><div class="num">02 · FOUNDATIONS</div><span class="tag">NURSERY</span><h3 data-en>Nursery & Primary School</h3><h3 data-fr>École maternelle et primaire</h3><p data-en>Building core literacy, numeracy, confidence, curiosity and the habits learners carry into the next phase.</p><p data-fr>Développer la lecture, le calcul, la confiance, la curiosité et les habitudes nécessaires à la poursuite du parcours scolaire.</p></article>
+      <article class="stage reveal"><div class="num">03 · SECONDARY</div><span class="tag">ACADEMIC</span><h3 data-en>Secondary Grammar</h3><h3 data-fr>Secondaire général</h3><p data-en>A structured secondary pathway supporting academic development, discipline, responsibility and preparation for further study.</p><p data-fr>Un parcours secondaire structuré favorisant le développement académique, la discipline, la responsabilité et la préparation aux études supérieures.</p></article>
+      <article class="stage reveal"><div class="num">04 · COMMERCE</div><span class="tag">CAREER</span><h3 data-en>Commercial College</h3><h3 data-fr>Collège commercial</h3><p data-en>A commercially focused pathway for learners developing practical knowledge related to business, administration and the working world.</p><p data-fr>Une filière orientée vers le commerce pour développer des connaissances pratiques liées aux affaires, à l'administration et au monde professionnel.</p></article>
+      <article class="stage reveal"><div class="num">05 · INDUSTRIAL</div><span class="tag">TECHNICAL</span><h3 data-en>Industrial Technical College</h3><h3 data-fr>Collège industriel technique</h3><p data-en>A technical direction connecting classroom learning with practical skills, tools, systems and applied problem-solving.</p><p data-fr>Une orientation technique qui relie l'apprentissage théorique aux compétences pratiques, aux outils, aux systèmes et à la résolution de problèmes appliqués.</p></article>
+      <article class="stage reveal"><div class="num">06 · THE JOURNEY</div><span class="tag">SUMMIT COMPLEX</span><h3 data-en>A Connected Educational Journey</h3><h3 data-fr>Un parcours éducatif intégré</h3><p data-en>The strength of the complex is the continuity between its different educational stages, giving learners room to develop and progress.</p><p data-fr>La force du complexe réside dans la continuité entre ses différentes étapes éducatives, offrant aux apprenants un cadre pour évoluer et progresser.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section soft">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="ey">Facilities & environment</span><h2 data-en>A school experience seen in the details.</h2><h2 data-fr>Une expérience scolaire qui se vit dans les détails.</h2></div>
+      <p data-en>Use this section to showcase the real places that define Summit Complex — buildings, classrooms, practical spaces, grounds and the everyday life of the school.</p>
+      <p data-fr>Cette section permettra de présenter les vrais espaces qui définissent le Summit Complex : bâtiments, salles de classe, espaces pratiques, terrain et vie quotidienne de l'établissement.</p>
+    </div>
+    <div class="facility-grid">
+      <div class="facility reveal"><div class="ph"><div class="placeholder"><div class="ph-inner"><i class="fa-solid fa-building"></i><strong>Campus photograph</strong><span>Main Summit Complex view</span></div></div></div><div class="facility-copy"><small>Campus</small><strong data-en>The Summit Complex campus</strong><strong data-fr>Le campus du Summit Complex</strong></div></div>
+      <div class="facility reveal"><div class="ph"><div class="placeholder"><div class="ph-inner"><i class="fa-solid fa-chalkboard"></i><strong>Classroom photograph</strong><span>Real local image</span></div></div></div><div class="facility-copy"><small>Learning</small><strong data-en>Classrooms & learning spaces</strong><strong data-fr>Salles de classe et espaces d'apprentissage</strong></div></div>
+      <div class="facility reveal"><div class="ph"><div class="placeholder"><div class="ph-inner"><i class="fa-solid fa-flask"></i><strong>Practical-space photograph</strong><span>Real local image</span></div></div></div><div class="facility-copy"><small>Practical</small><strong data-en>Laboratories & practical learning</strong><strong data-fr>Laboratoires et apprentissage pratique</strong></div></div>
+      <div class="facility reveal"><div class="ph"><div class="placeholder"><div class="ph-inner"><i class="fa-solid fa-computer"></i><strong>ICT photograph</strong><span>Real local image</span></div></div></div><div class="facility-copy"><small>Technology</small><strong data-en>ICT & modern learning</strong><strong data-fr>TIC et apprentissage moderne</strong></div></div>
+      <div class="facility reveal"><div class="ph"><div class="placeholder"><div class="ph-inner"><i class="fa-solid fa-futbol"></i><strong>School-life photograph</strong><span>Grounds, sports or student life</span></div></div></div><div class="facility-copy"><small>Life</small><strong data-en>School grounds & student life</strong><strong data-fr>Espaces extérieurs et vie scolaire</strong></div></div>
+    </div>
+    <div class="gallery-note">PLACEHOLDERS ONLY · Replace with client-supplied local photographs later.</div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="ey">What Summit stands for</span><h2 data-en>A complete environment for learning and development.</h2><h2 data-fr>Un environnement complet pour apprendre et se développer.</h2></div>
+      <p data-en>These themes can later be matched to the school's official values, achievements and facilities supplied by the client.</p>
+      <p data-fr>Ces thèmes pourront ensuite être adaptés aux valeurs officielles de l'établissement, à ses réalisations et aux équipements communiqués par le client.</p>
+    </div>
+    <div class="values">
+      <article class="value reveal"><b>01 · FOUNDATION</b><h3 data-en>Start well</h3><h3 data-fr>Bien commencer</h3><p data-en>Give younger learners a safe and structured environment in which confidence and curiosity can grow.</p><p data-fr>Offrir aux plus jeunes un environnement sûr et structuré où peuvent grandir la confiance et la curiosité.</p></article>
+      <article class="value reveal"><b>02 · DISCIPLINE</b><h3 data-en>Grow with purpose</h3><h3 data-fr>Grandir avec un objectif</h3><p data-en>Build habits of responsibility, consistency and commitment as learners progress.</p><p data-fr>Développer la responsabilité, la régularité et l'engagement à mesure que les apprenants progressent.</p></article>
+      <article class="value reveal"><b>03 · PRACTICE</b><h3 data-en>Learn by doing</h3><h3 data-fr>Apprendre par la pratique</h3><p data-en>Create space for practical, commercial and technical learning that connects education with real-world skills.</p><p data-fr>Créer un espace pour l'apprentissage pratique, commercial et technique, en lien avec les compétences du monde réel.</p></article>
+      <article class="value reveal"><b>04 · FUTURE</b><h3 data-en>Prepare for what comes next</h3><h3 data-fr>Préparer la suite</h3><p data-en>Help learners move forward with knowledge, skills and confidence for the next chapter.</p><p data-fr>Aider les apprenants à avancer avec les connaissances, les compétences et la confiance nécessaires pour la suite.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="wrap cta-inner">
+    <div><span class="ey">Summit Complex</span><h2 data-en>A place to begin. A place to grow.</h2><h2 data-fr>Un lieu pour commencer. Un lieu pour grandir.</h2><p data-en>From a child's earliest school experience to academic, commercial and technical education, Summit Complex brings the journey together.</p><p data-fr>De la première expérience scolaire aux études générales, commerciales et techniques, le Summit Complex réunit le parcours éducatif.</p></div>
+    <a href="contact.html" class="btn btn-gold"><span data-en>Talk to SGOC</span><span data-fr>Parler à SGOC</span><i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div class="foot-brand">
+      <div class="brand"><img class="brand-logo" src="logo.jpg" alt="SGOC logo"><span><strong style="color:#fff;font:800 1.25rem Manrope">SGOC</strong><small style="display:block;color:rgba(255,255,255,.45);font:400 .48rem 'Space Mono';letter-spacing:.1em;text-transform:uppercase">Summit Group of Companies</small></span></div>
+      <p data-en>Summit Complex — daycare, nursery and primary school, secondary grammar, commercial and industrial technical education.</p>
+      <p data-fr>Summit Complex — garderie, maternelle et primaire, secondaire général, enseignement commercial et industriel technique.</p>
+    </div>
+    <div><h4 data-en>Explore</h4><h4 data-fr>Explorer</h4><ul>
+      <li><a href="index.html" data-en>Home</a><a href="index.html" data-fr>Accueil</a></li>
+      <li><a href="about.html" data-en>About</a><a href="about.html" data-fr>À Propos</a></li>
+      <li><a href="construction.html" data-en>Construction</a><a href="construction.html" data-fr>Construction</a></li>
+      <li><a href="projects.html" data-en>Projects</a><a href="projects.html" data-fr>Projets</a></li>
+    </ul></div>
+    <div><h4 data-en>Services</h4><h4 data-fr>Services</h4><ul>
+      <li><a href="solar.html" data-en>Solar Energy</a><a href="solar.html" data-fr>Énergie Solaire</a></li>
+      <li><a href="education.html" data-en>Education</a><a href="education.html" data-fr>Éducation</a></li>
+      <li><a href="equipment.html" data-en>Heavy Equipment</a><a href="equipment.html" data-fr>Équipements Lourds</a></li>
+      <li><a href="contact.html" data-en>Contact</a><a href="contact.html" data-fr>Contact</a></li>
+    </ul></div>
+    <div><h4>Contact</h4><ul><li>+237 677 515 845</li><li>contact@sgoc.cm</li><li>Bamenda, Cameroon</li><li><a href="https://wa.me/237677515845" target="_blank" rel="noopener">WhatsApp ↗</a></li></ul></div>
+  </div>
+  <div class="wrap bottom"><span data-en>© 2026 Summit Group of Companies Services.</span><span data-fr>© 2026 Summit Group of Companies Services.</span><span class="mono">QUALITY · INTEGRITY · EXCELLENCE</span></div>
+</footer>
+
+<script>
+(function(){
+  const $=s=>document.querySelector(s), $$=s=>Array.from(document.querySelectorAll(s));
+  function applyLang(lang){document.documentElement.classList.toggle('lang-fr',lang==='fr');document.documentElement.lang=lang;$$('[data-lang-btn]').forEach(b=>b.classList.toggle('active',b.dataset.langBtn===lang));try{localStorage.setItem('sgoc_lang',lang)}catch(e){}}
+  $$('[data-lang-btn]').forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.langBtn)));
+  try{applyLang(localStorage.getItem('sgoc_lang')||'en')}catch(e){applyLang('en')}
+  const rev=$$('.reveal');
+  const rio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rio.unobserve(e.target)}}),{threshold:.12});
+  rev.forEach(x=>rio.observe(x));
+  const hamb=$('#hamb');
+  hamb.addEventListener('click',()=>{const open=document.body.classList.toggle('menu-open');hamb.setAttribute('aria-expanded',open?'true':'false');hamb.innerHTML=open?'<i class="fa-solid fa-xmark"></i>':'<i class="fa-solid fa-bars"></i>';});
+  $$('.nav-links a').forEach(a=>a.addEventListener('click',()=>{document.body.classList.remove('menu-open');hamb.setAttribute('aria-expanded','false');hamb.innerHTML='<i class="fa-solid fa-bars"></i>';}));
+})();
+</script>
+</body>
+</html>
